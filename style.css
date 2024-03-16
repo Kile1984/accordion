@@ -1,0 +1,86 @@
+/*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+/* 
+      MAIN COLOR: #087f5b
+      GREY COLOR: #343a40
+      */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  line-height: 1;
+}
+.accordion {
+  width: 760px;
+  margin: 0 auto;
+  margin-top: 48px;
+}
+.item {
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  border-top: 4px solid transparent;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+.item .number,
+.item .text {
+  font-size: 24px;
+  color: #212529;
+  padding: 24px;
+  font-weight: 500;
+}
+.item .text {
+  text-transform: uppercase;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.hidden-box {
+  overflow: hidden;
+  line-height: 1.6;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  grid-column: 2;
+}
+.hidden-box p {
+  margin-bottom: 24px;
+  color: #212529;
+  font-weight: 500;
+  padding-top: 16px;
+}
+.hidden-box ul {
+  color: #868e96;
+  margin-left: 16px;
+}
+
+/* Toggle class */
+.item .show {
+  max-height: 300px;
+}
+.item .main-color {
+  color: #212529;
+}
+.item .gray-color {
+  color: #adb5bd;
+}
+.item .color-green {
+  color: #0ca678;
+}
+.border {
+  border-top: 4px solid #0ca678;
+}
